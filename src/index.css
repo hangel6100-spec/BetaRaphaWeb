@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Rapha Med Design System - Earthy Medical Color Palette */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 60 12% 95%; /* Light sage-tinted white */
+    --foreground: 78 18% 23%; /* Ebony #414833 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 78 18% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 78 18% 23%;
+
+    /* Primary - Dusty Olive */
+    --primary: 82 16% 35%; /* #656d4a */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Camel */
+    --secondary: 38 24% 52%; /* #a68a64 */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Khaki Beige */
+    --muted: 52 15% 64%; /* #b6ad90 */
+    --muted-foreground: 78 18% 23%;
+
+    /* Accent - Coffee Brown */
+    --accent: 30 40% 40%; /* #936639 */
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 60 8% 83%;
+    --input: 60 8% 83%;
+    --ring: 82 16% 35%;
+
+    --radius: 0.5rem;
+
+    /* Extended Palette */
+    --sage: 70 13% 72%; /* #c2c5aa */
+    --sage-dark: 74 14% 60%; /* #a4ac86 */
+    --charcoal: 90 12% 20%; /* #333d29 */
+    --coffee: 30 40% 40%; /* #936639 */
+    --camel: 38 24% 52%; /* #a68a64 */
+    --khaki: 52 15% 64%; /* #b6ad90 */
+    --ebony: 78 18% 23%; /* #414833 */
+
+    /* Hero Section Colors */
+    --hero-primary: 21 48% 19%; /* #452B1F - Deep brown */
+    --hero-accent: 60 99% 16%; /* #525201 - Olive gold */
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 78 18% 23%;
+    --sidebar-primary: 82 16% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 70 13% 72%;
+    --sidebar-accent-foreground: 78 18% 23%;
+    --sidebar-border: 60 8% 83%;
+    --sidebar-ring: 82 16% 35%;
+  }
+
+  .dark {
+    --background: 90 12% 20%;
+    --foreground: 60 12% 95%;
+
+    --card: 90 12% 25%;
+    --card-foreground: 60 12% 95%;
+
+    --popover: 90 12% 25%;
+    --popover-foreground: 60 12% 95%;
+
+    --primary: 70 13% 72%;
+    --primary-foreground: 90 12% 20%;
+
+    --secondary: 38 24% 52%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 82 16% 35%;
+    --muted-foreground: 70 13% 72%;
+
+    --accent: 30 40% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 82 16% 35%;
+    --input: 82 16% 35%;
+    --ring: 70 13% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    color: hsl(var(--ebony));
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      hsla(var(--charcoal), 0.7) 0%,
+      hsla(var(--primary), 0.5) 100%
+    );
+  }
+
+  /* Card Hover Effects */
+  .product-card {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .product-card:hover {
+    @apply shadow-xl -translate-y-1;
+    border-color: hsl(var(--sage-dark));
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply relative transition-colors duration-200;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    background-color: hsl(var(--coffee));
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Section Backgrounds */
+  .section-sage {
+    background-color: hsl(var(--sage));
+    @apply py-20 md:py-28;
+  }
+
+  .section-khaki {
+    background-color: hsl(var(--khaki) / 0.4);
+    @apply py-16 md:py-24;
+  }
+
+  .section-charcoal {
+    background-color: hsl(var(--charcoal));
+    color: hsl(var(--sage));
+    @apply py-20 md:py-28;
+  }
+
+  /* Visual Divider */
+  .section-divider {
+    @apply border-t border-border/50;
+  }
+
+  /* Scroll Animations */
+  .fade-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .fade-up.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    @apply px-8 py-4 font-semibold rounded-lg transition-all duration-300 text-base;
+    background-color: hsl(var(--coffee));
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: hsl(var(--camel));
+    @apply shadow-lg transform -translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply px-8 py-4 font-semibold rounded-lg transition-all duration-300 border-2 text-base;
+    border-color: hsl(var(--sage));
+    color: white;
+  }
+
+  .btn-outline:hover {
+    background-color: hsl(var(--sage));
+    color: hsl(var(--charcoal));
+    @apply transform -translate-y-0.5;
+  }
+
+  /* Stat Numbers */
+  .stat-number {
+    @apply text-5xl md:text-6xl font-bold;
+    background: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(var(--sage)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Trust Badge */
+  .trust-badge {
+    @apply flex items-center gap-3 bg-black/40 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/10;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--sage));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--charcoal));
+}
