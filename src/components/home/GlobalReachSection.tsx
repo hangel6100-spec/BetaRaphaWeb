@@ -1,7 +1,7 @@
 import { Globe, Users, Building, Truck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ScrollReveal, StaggerContainer, staggerItem } from '@/components/animation/ScrollReveal';
-import globalReachVideo from '@/assets/global-reach-video.mov';
+import earthImage from '@/assets/earth-global.jpg';
 
 const globalStats = [
   {
@@ -37,10 +37,18 @@ export function GlobalReachSection() {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          poster={earthImage}
         >
-          <source src={globalReachVideo} type="video/quicktime" />
-          Your browser does not support the video tag.
+          <source src="/videos/global-reach-video.mov" type="video/mp4" />
+          <source src="/videos/global-reach-video.mov" type="video/quicktime" />
         </video>
+        {/* Fallback image if video doesn't load */}
+        <img 
+          src={earthImage} 
+          alt="Global reach" 
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: -1 }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-transparent to-forest/80" />
         <div className="absolute inset-0 flex items-center justify-center">
           <h2 className="text-gold text-3xl md:text-4xl lg:text-5xl font-bold text-center drop-shadow-lg">
