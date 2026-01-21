@@ -2,6 +2,7 @@ import { Globe, Users, Building, Truck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ScrollReveal, StaggerContainer, staggerItem } from '@/components/animation/ScrollReveal';
 import earthImage from '@/assets/earth-global.jpg';
+
 const globalStats = [{
   icon: Globe,
   value: '50+',
@@ -19,23 +20,31 @@ const globalStats = [{
   value: '24/7',
   label: 'Global Logistics'
 }];
+
 export function GlobalReachSection() {
-  return <section className="py-12 md:py-16 bg-forest text-white overflow-hidden rounded-none shadow-none border-0">
+  return (
+    <section className="py-12 md:py-16 bg-forest text-white overflow-hidden rounded-none shadow-none border-0">
+      {/* Section Header - Outside Video */}
+      <div className="container mx-auto px-4 mb-6">
+        <h2 className="text-gold text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          Global Outreach
+        </h2>
+      </div>
+
       {/* Full-width Video Background */}
       <div className="relative w-full h-64 md:h-80 lg:h-96 mb-10">
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/videos/global-reach-video.mov" type="video/quicktime" />
           <source src="/videos/global-reach-video.mp4" type="video/mp4" />
         </video>
         {/* Fallback image if video doesn't load */}
-        <img src={earthImage} alt="Global reach" className="absolute inset-0 w-full h-full object-cover" style={{
-        zIndex: -1
-      }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/80 via-transparent to-forest/60" />
-        <div className="absolute inset-0 flex items-start justify-center pt-6 md:pt-10">
-          <h2 className="text-gold md:text-4xl lg:text-5xl font-bold drop-shadow-lg text-5xl mb-0 mt-0 pt-0 pb-0 text-left">
-            Global Outreach
-          </h2>
-        </div>
+        <img 
+          src={earthImage} 
+          alt="Global reach" 
+          className="absolute inset-0 w-full h-full object-cover" 
+          style={{ zIndex: -1 }} 
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-transparent to-forest/60" />
       </div>
 
       <div className="container mx-auto px-4">
@@ -53,7 +62,8 @@ export function GlobalReachSection() {
             </p>
             
             <StaggerContainer className="grid grid-cols-2 gap-4">
-              {globalStats.map(stat => <motion.div key={stat.label} variants={staggerItem} className="flex items-center gap-3">
+              {globalStats.map(stat => (
+                <motion.div key={stat.label} variants={staggerItem} className="flex items-center gap-3">
                   <div className="p-2 bg-gold/20 rounded-lg">
                     <stat.icon className="w-5 h-5 text-gold" />
                   </div>
@@ -61,7 +71,8 @@ export function GlobalReachSection() {
                     <p className="text-xl font-bold text-gold">{stat.value}</p>
                     <p className="text-sage/70 text-xs">{stat.label}</p>
                   </div>
-                </motion.div>)}
+                </motion.div>
+              ))}
             </StaggerContainer>
           </ScrollReveal>
 
@@ -76,5 +87,6 @@ export function GlobalReachSection() {
           </ScrollReveal>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
