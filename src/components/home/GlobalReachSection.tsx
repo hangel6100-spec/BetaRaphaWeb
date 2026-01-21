@@ -1,7 +1,7 @@
 import { Globe, Users, Building, Truck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ScrollReveal, StaggerContainer, staggerItem } from '@/components/animation/ScrollReveal';
-import earthImage from '@/assets/earth-global.jpg';
+import globalReachVideo from '@/assets/global-reach-video.mov';
 
 const globalStats = [
   {
@@ -29,14 +29,33 @@ const globalStats = [
 export function GlobalReachSection() {
   return (
     <section className="py-12 md:py-16 bg-forest text-white overflow-hidden">
+      {/* Full-width Video Background */}
+      <div className="relative w-full h-64 md:h-80 lg:h-96 mb-10">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={globalReachVideo} type="video/quicktime" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-transparent to-forest/80" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h2 className="text-gold text-3xl md:text-4xl lg:text-5xl font-bold text-center drop-shadow-lg">
+            Global Outreach
+          </h2>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <ScrollReveal>
-            <span className="text-gold font-medium mb-2 block text-sm">Global Reach</span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
               Delivering Excellence Worldwide
-            </h2>
+            </h3>
             <p className="text-sage/90 text-base mb-6 leading-relaxed">
               From North America to emerging markets across the globe, RaphaMed's medical supplies 
               reach healthcare professionals who need them most. Our international distribution 
@@ -63,21 +82,14 @@ export function GlobalReachSection() {
             </StaggerContainer>
           </ScrollReveal>
 
-          {/* Earth Image */}
-          <ScrollReveal delay={0.2} className="relative flex items-center justify-center">
-            <div className="relative w-full max-w-sm lg:max-w-md">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/30 to-primary/20 rounded-full blur-3xl scale-110" />
-              <div className="relative z-10 aspect-square w-full overflow-hidden rounded-full border-4 border-gold/30 shadow-2xl">
-                <img
-                  src={earthImage}
-                  alt="Global distribution network"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-2 rounded-lg font-semibold shadow-lg z-20 whitespace-nowrap text-sm">
-                International Quality Standards
-              </div>
-            </div>
+          {/* Stats highlight */}
+          <ScrollReveal delay={0.2} className="bg-primary/20 rounded-2xl p-6 border border-gold/20">
+            <p className="text-gold font-semibold text-lg mb-2">International Quality Standards</p>
+            <p className="text-sage/80 text-sm">
+              Our products meet the highest international quality certifications, 
+              ensuring healthcare professionals worldwide receive reliable, 
+              compliant medical supplies.
+            </p>
           </ScrollReveal>
         </div>
       </div>
