@@ -47,8 +47,8 @@ export function GlobalReachSection() {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ zIndex: -1 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-transparent to-forest/80" />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/80 via-transparent to-forest/60" />
+        <div className="absolute inset-0 flex items-start justify-center pt-6 md:pt-10">
           <h2 className="text-gold text-3xl md:text-4xl lg:text-5xl font-bold text-center drop-shadow-lg">
             Global Outreach
           </h2>
