@@ -22,12 +22,12 @@ const certifications = ['ISO 13485', 'CE Marked', 'FDA Registered', 'GMP Certifi
 
 export function Footer() {
   return (
-    <footer className="section-charcoal -mt-36">
+    <footer className="section-charcoal">
       {/* Newsletter Section */}
       <div className="border-b border-primary/30">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-3xl font-bold text-white mb-3">Stay Updated</h3>
+            <h3 className="text-3xl font-bold text-white mb-3 -mt-6">Stay Updated</h3>
             <p className="text-sage/80 mb-4 text-lg">
               Subscribe to our newsletter for the latest product updates and healthcare insights.
             </p>
