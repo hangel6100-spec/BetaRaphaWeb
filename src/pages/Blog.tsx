@@ -6,69 +6,69 @@ import { motion } from 'framer-motion';
 
 const healthCanadaUpdates = [
   {
-    title: 'Medical Device Regulations Update 2024',
-    date: 'January 15, 2024',
-    summary: 'Health Canada announces new guidelines for Class II medical device registration and compliance requirements.',
-    link: 'https://www.canada.ca/en/health-canada.html',
+    title: 'MDEL Modernization Phase II Consultation',
+    date: 'November 25, 2025',
+    summary: 'Health Canada launches consultation to modernize Medical Device Establishment Licences, including removing MDEL requirements for certain foreign distributors and strengthening traceability.',
+    link: 'https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices.html',
   },
   {
-    title: 'PPE Quality Standards Enhancement',
-    date: 'December 8, 2023',
-    summary: 'Updated standards for personal protective equipment to ensure higher safety benchmarks in healthcare settings.',
-    link: 'https://www.canada.ca/en/health-canada.html',
+    title: 'Public Release of Clinical Device Information',
+    date: 'November 2025',
+    summary: 'New initiative provides public access to clinical data for Class III and IV medical devices through the Clinical Information Portal.',
+    link: 'https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices.html',
   },
   {
-    title: 'Supply Chain Resilience Guidelines',
-    date: 'November 22, 2023',
-    summary: 'New recommendations for healthcare facilities to strengthen medical supply chain resilience.',
-    link: 'https://www.canada.ca/en/health-canada.html',
+    title: 'Mandatory Device Shortage Reporting Update',
+    date: 'November 7, 2025',
+    summary: 'Updates to the mandatory shortage list now include specific devices like capsular tension rings. Manufacturers must report shortages under MDR sections 62.23-62.25.',
+    link: 'https://www.canada.ca/en/health-canada/services/drugs-health-products/compliance-enforcement/establishment-licences.html',
   },
 ];
 
 const whoUpdates = [
   {
-    title: 'Global Health Security Framework 2024',
-    date: 'January 10, 2024',
-    summary: 'WHO releases comprehensive framework for pandemic preparedness and medical supply stockpiling.',
-    link: 'https://www.who.int/',
+    title: 'Historic Pandemic Agreement Adopted',
+    date: 'May 2025',
+    summary: 'Member states adopted the world\'s first Pandemic Agreement at the 78th World Health Assembly to ensure equitable access to vaccines and medicines for future global threats.',
+    link: 'https://www.who.int/news-room/spotlight/stronger-together-milestones-that-mattered-in-2025',
   },
   {
-    title: 'Infection Prevention Best Practices',
-    date: 'December 15, 2023',
-    summary: 'Updated global guidelines for infection prevention and control in healthcare facilities.',
-    link: 'https://www.who.int/',
+    title: 'Disease Elimination Milestones Achieved',
+    date: 'January 2025',
+    summary: 'Georgia, Suriname, and Timor-Leste certified malaria-free. Maldives achieved triple elimination of mother-to-child transmission of HIV, syphilis, and hepatitis B.',
+    link: 'https://www.who.int/news-room/spotlight/stronger-together-milestones-that-mattered-in-2025',
   },
   {
-    title: 'Medical Device Access Initiative',
-    date: 'November 30, 2023',
-    summary: 'New WHO initiative to improve access to essential medical devices in developing countries.',
+    title: 'NCD Fast-Track Targets for 2030',
+    date: 'January 2025',
+    summary: 'New political declaration sets ambitious 2030 targets: 150 million fewer tobacco users and 150 million more people with access to mental health care.',
     link: 'https://www.who.int/',
   },
 ];
 
 const industryNews = [
   {
-    title: 'Sustainable Medical Supplies: The Future of Healthcare',
-    date: 'January 18, 2024',
-    summary: 'How eco-friendly medical products are transforming the healthcare industry while maintaining quality standards.',
-    category: 'Sustainability',
-  },
-  {
-    title: 'Innovation in Wound Care Technology',
-    date: 'January 5, 2024',
-    summary: 'Latest advancements in wound care products and their impact on patient recovery times.',
+    title: 'AI-Driven Medical Supply Chain Optimization',
+    date: 'January 2025',
+    summary: 'Healthcare facilities are increasingly adopting AI and machine learning to predict demand, reduce waste, and ensure critical supply availability.',
     category: 'Innovation',
   },
   {
-    title: 'Healthcare Supply Chain Trends for 2024',
-    date: 'December 28, 2023',
-    summary: 'Key trends shaping the medical supply industry and what healthcare facilities should prepare for.',
+    title: 'Sustainable Medical Packaging Standards 2025',
+    date: 'January 2025',
+    summary: 'New industry guidelines promote eco-friendly packaging for medical supplies while maintaining sterility and compliance standards.',
+    category: 'Sustainability',
+  },
+  {
+    title: 'Global Medical Device Market Outlook 2025',
+    date: 'January 2025',
+    summary: 'The medical device market continues to grow with increased demand for PPE, surgical supplies, and diagnostic equipment across emerging markets.',
     category: 'Industry Trends',
   },
   {
-    title: 'The Importance of Quality Certifications',
-    date: 'December 12, 2023',
-    summary: 'Understanding ISO 13485 and other certifications that ensure medical product safety and reliability.',
+    title: 'Enhanced Quality Certification Requirements',
+    date: 'December 2024',
+    summary: 'ISO 13485:2024 updates emphasize risk management, cybersecurity for connected devices, and supply chain transparency for medical manufacturers.',
     category: 'Quality Assurance',
   },
 ];
